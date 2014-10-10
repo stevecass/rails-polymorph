@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+
+  concern :commentable do
+    resources :comments
+  end
+
+  resources :photos, concerns: :commentable, shallow: true
+  resources :messages, concerns: :commentable
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
