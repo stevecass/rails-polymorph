@@ -33,3 +33,10 @@ end
 
 ```
 
+Try downloading an running this and compare
+
+[http://localhost:3000/messages/1/comments](http://localhost:3000/messages/1/comments)
+
+[http://localhost:3000/photos/1/comments](http://localhost:3000/photos/1/comments)
+
+Both map to comments#index, which can then examine its uri / parameters to see which commentable type it was called for.
